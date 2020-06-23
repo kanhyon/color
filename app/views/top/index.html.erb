@@ -1,0 +1,105 @@
+<div class="hero">
+    <div class="secpad">
+        <div class="swiper-container swiper-container-1">
+					
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide ">このサイトの目的</div>
+						<div class="swiper-slide ">モデル募集</div>
+					</div>
+					<!-- If we need pagination -->
+					<div class="swiper-pagination"></div>
+				
+					<!-- If we need navigation buttons -->
+					<div class="swiper-button-prev "></div>
+					<div class="swiper-button-next "></div>
+				
+					<!-- If we need scrollbar -->
+					
+				</div>        
+        <div class="season-choice">
+          <ul class="season">
+		  	<li>	<%= link_to "Spring", "#", class: "btn btn-success" %> </li>
+			  <li>	<%= link_to "Summer", "#", class: "btn btn-primary" %> </li>
+			  <li>	<%= link_to "Autumn", "#", class: "btn btn-danger" %> </li>
+			  <li>	<%= link_to "Winter", "#", class: "btn btn-light" %> </li>
+          </ul>
+        </div>
+        <div class="season-ex">
+			<table class="table1">
+				<tr>
+					<td class="td-s">SPRING</td>
+					<td >SUMMER</td>
+				</tr>
+				<tr>
+					<td>AUTUMN</td>
+					<td class="td-w">WINTER</td>
+				</tr>
+			</table>
+        </div>
+        <div class="qanda">
+            <h2>よくある質問</h2>
+            <ul>
+				<li>
+					<dl>
+						<dt class="question">○○○○○○○ですか？</dt>
+						<dd class="answer">○○○○○○○です。</dd>
+					</dl>
+				</li>
+			</ul>
+        </div>
+        <div class="news">
+            <h2>NEWS</h2>
+            <ul>
+				<li>
+					<dl>
+						<dt class="day">2020/06/22</dt>
+						<dd>
+							<h3>新製品の発売のお知らせ</h3>
+							<p>○○より新製品が発売されました。特徴は○○となっており、SPRINGの方におすすめです。当サイトからご購入できますので、是非お試しください。</p>
+						</dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt class="day">2020/06/23</dt>
+						<dd>
+							<h3>新製品の発売のお知らせ</h3>
+							<p>○○より新製品が発売されました。特徴は○○となっており、SUMMERの方におすすめです。当サイトからご購入できますので、是非お試しください。</p>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+        </div>
+        <div class="contact">
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+<script>
+		var mySwiper = new Swiper ('.swiper-container-1', {
+		  // Optional parameters
+		  
+		  loop: true,
+	     
+		  // If we need pagination
+		  
+	  
+		  // Navigation arrows
+		  navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		  },
+	  
+		  // And if we need scrollbar
+		  scrollbar: {
+			el: '.swiper-scrollbar',
+		  },
+		 
+ 		 autoplay: {
+    	delay: 3000,
+		  },
+
+    });
+</script>

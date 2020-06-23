@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Color</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+   
+  </head>
+
+  <body>
+    <header>
+        <div id="wrapper">
+            <p class="btn-gnavi">
+              <span></span>
+              <span></span>
+              <span></span>
+            </p>
+            <nav id="global-navi">
+                <ul class="menu">     
+                  <li><a href="">TOP</a></li>
+                  <li><a href="">診断</a></li>
+                  <li><a href="">よくある質問</a></li>
+                  <li><a href="">NEWS</a></li>
+                  <li><a href="">お問い合わせ</a></li>
+                  <li><a href="">ABOUT US</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1 class="logo">Logo</div>
+    </header>
+    <%= yield %>
+    <footer>
+      <div class="secpad-f">
+        <img src="assets/lips_logo.png" alt="">
+        <ul>
+          <li>利用規約</li>
+          <li>お問い合わせ</li>
+          <li>運営会社</li>
+        </ul>
+      </div>
+    </footer>
+ 
+    <script>
+      $(function(){
+          $(".btn-gnavi").on("click", function(){
+              // ハンバーガーメニューの位置を設定
+              var leftVal = 0;
+              if($(this).hasClass("open")) {
+                  // 位置を移動させメニューを開いた状態にする
+                  leftVal = -300;
+                  // メニューを開いたら次回クリック時は閉じた状態になるよう設定
+                  $(this).removeClass("open");
+              } else {
+                  // メニューを開いたら次回クリック時は閉じた状態になるよう設定
+                  $(this).addClass("open");
+              }
+      
+              $("#global-navi").stop().animate({
+                  left: leftVal
+              }, 200);
+          });
+      });
+    </script> 
+     <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+ </body>
+</html>

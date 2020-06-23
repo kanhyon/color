@@ -1,0 +1,78 @@
+// Place all the styles related to the top controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+html{
+font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+li{
+list-style: none;
+}
+.secpad {
+width: 70vw;
+margin: 0 auto;
+}
+.swiper-container{
+height: 300px;
+margin: 30px 0;
+}
+.swiper-slide {
+margin: 0 auto;
+text-align: center;
+}
+.swiper-slide{
+background-image: url("/assets/aefac.png");
+background-size: contain;
+}
+.season-choice{
+margin-top: 50px;
+}
+
+.season li {
+list-style: none;
+width:calc(50% - 2px);
+}
+
+.season{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+padding: 0;
+}
+.btn{
+width: 100%;
+margin: 2px;
+}
+.season-ex{
+margin-top: 70px;
+}
+.qanda{
+margin-top: 50px;
+}
+.qanda ul{
+    margin-top: 50px;
+}
+.question {
+&:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f059"; // アイコンの種類
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+}
+}
+.answer {
+&::before{
+    font-family: "Font Awesome 5 Free";
+    content: "\f0a4"; // アイコンの種類
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+}
+}
+dd{
+font-weight: 700;
+}
+.news{
+    margin-top: 50px;
+}
+
